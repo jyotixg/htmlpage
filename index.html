@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Receipt</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .receipt { margin: 20px; padding: 20px; border: 1px solid #ccc; }
+    .btn { padding: 10px 20px; background-color: #007BFF; color: white; text-align: center; cursor: pointer; }
+    .btn:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="receipt">
+    <h2>Movie Booking Receipt</h2>
+    <p>Movie: <strong>Avengers: Endgame</strong></p>
+    <p>Showtime: <strong>12:00 PM</strong></p>
+    <p>Price: ₹1000</p>
+    <button class="btn" onclick="goBack()">Go Back</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
