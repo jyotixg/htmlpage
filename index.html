@@ -15,20 +15,24 @@
   <div class="receipt">
     <h2>Movie Booking Receipt</h2>
     <p>Movie: <strong>Avengers: Endgame</strong></p>
-    <p>Showtime: <strong>03:00 PM</strong></p>
+    <p>Showtime: <strong>12:00 PM</strong></p>
     <p>Price: ₹1000</p>
     <!-- Go Back button to return to WhatsApp -->
-    <button class="btn" onclick="goBack()">Go Back</button>
+    <button class="btn" onclick="confirmGoBack()">Go Back</button>
   </div>
 
   <script>
-    function goBack() {
-      // WhatsApp URL scheme to open WhatsApp
-      const phoneNumber = "8692809476"; // Replace with the business or contact number
-      const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    function confirmGoBack() {
+      // Ask for user confirmation before redirecting to WhatsApp
+      const userConfirmed = confirm("You will be redirected to WhatsApp. Do you want to proceed?");
+      if (userConfirmed) {
+        // WhatsApp URL scheme to open WhatsApp
+        const phoneNumber = "1234567890"; // Replace with the business or contact number
+        const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-      // Open WhatsApp link in a new tab (for web)
-      window.open(whatsappUrl, '_blank');
+        // Redirect to WhatsApp
+        window.location.href = whatsappUrl;
+      }
     }
   </script>
 </body>
