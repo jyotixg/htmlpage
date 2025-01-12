@@ -1,49 +1,37 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Receipt</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .receipt {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Booking Receipt</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .receipt { margin: 20px; padding: 20px; border: 1px solid #ccc; }
+    .btn { padding: 10px 20px; background-color: #007BFF; color: white; text-align: center; cursor: pointer; }
+    .btn:hover { background-color: #0056b3; }
+  </style>
 </head>
-
 <body>
-    <div class="receipt">
-        <h2>Movie Booking Receipt</h2>
-        <p>Movie: <strong>Avengers: Endgame</strong></p>
-        <p>Showtime: <strong>11:00 PM</strong></p>
-        <p>Price: ₹1000</p>
-        <button class="btn" onclick="goBack()">Go Back</button>
-    </div>
+  <div class="receipt">
+    <h2>Movie Booking Receipt</h2>
+    <p>Movie: <strong>Avengers: Endgame</strong></p>
+    <p>Showtime: <strong>03:00 PM</strong></p>
+    <p>Price: ₹1000</p>
+    <!-- Go Back button to return to WhatsApp -->
+    <button class="btn" onclick="goBack()">Go Back</button>
+  </div>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+  <script>
+    function goBack() {
+      // Replace with the actual phone number in international format (e.g., +1 for USA, +44 for UK)
+      const phoneNumber = "918369646603"; // Replace with your WhatsApp number (in international format)
+      
+      // WhatsApp URL to open the app with a valid phone number and no pre-filled message
+      const whatsappUrl = `https://wa.me/${phoneNumber}`;
+      
+      // Redirect to WhatsApp without any message or chat initiation
+      window.location.href = whatsappUrl;
+    }
+  </script>
 </body>
-
 </html>
